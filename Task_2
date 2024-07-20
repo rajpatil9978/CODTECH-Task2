@@ -1,0 +1,58 @@
+def clear_screen():
+    import os
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+def main():
+    while True:
+        clear_screen()
+        print("\n\n 1. Calculate grade :   \n 2. Exit")
+        c = int(input("\n Enter your choice :   "))
+        
+        if c == 1:
+            rn = int(input("\n Enter Roll no.           :  "))
+            name = input("\n Enter Name of student    :  ")
+            s = int(input("\n Enter number of subjects :  "))
+            a = []
+            t = 0
+            
+            print("\n Enter grades of each subject :  ")
+            for i in range(1, s + 1):
+                grade = int(input(f"\n Subject      {i}     :  "))
+                a.append(grade)
+                t += grade
+            
+            avg = t / s
+            percentage = avg
+            
+            print("\n\n\t Displaying result ")
+            print(f"\n Roll no.           :  {rn}")
+            print(f" Name of student    :  {name}")
+            for i in range(1, s + 1):
+                print(f" Subject     {i}      :  {a[i - 1]}")
+            print(f" Total              :  {t}")
+            print(f" Percentage         :  {percentage:.2f}")
+            
+            # Determine grade based on percentage
+            if percentage >= 91:
+                print("\n Grade              :  A+")
+            elif percentage >= 81:
+                print("\n Grade              :  A")
+            elif percentage >= 71:
+                print("\n Grade              :  B+")
+            elif percentage >= 61:
+                print("\n Grade              :  B")
+            elif percentage >= 51:
+                print("\n Grade              :  C+")
+            elif percentage >= 40:
+                print("\n Grade              :  C")
+            else:
+                print("\n Grade              :  FAIL")
+        
+        elif c == 2:
+            exit()
+        
+        input("\n\n Please press Enter to continue...")
+
+
+if __name__ == "__main__":
+    main()
