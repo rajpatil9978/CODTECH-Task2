@@ -4,7 +4,9 @@ ID : CT4PP2843
 Domain : Python Programming
 Duration: JUNE to JULY 2024 
 Mentor : Neela santosh kumar
+
 Project Overview: Simple Grade Calculator
+
 Objective:
 The objective of this project is to create a simple command-line application in Python that allows users to calculate and display grades based on input marks for a student's subjects.
 
